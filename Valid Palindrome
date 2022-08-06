@@ -1,0 +1,9 @@
+from ntpath import join
+class Solution:
+    def isPalindrome(self, s: str) -> bool:
+        s = s.lower()                        #put all the characters in lower case
+        x=''.join(filter(str.isalnum, s)) #this is where all the magic is , join function adds all the chars together ,filter(str.alnum) removes all the special signs including spaces
+        if x == x[::-1]:                  #reverses the string
+            return True
+        else:
+            return False
